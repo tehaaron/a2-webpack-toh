@@ -19,11 +19,8 @@ import { NoContent } from './no-content';
 
 // TOH
 import './rxjs-extensions';
-import { XHRBackend } from '@angular/http';
-import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data';
 import { routedComponents } from './app.routes';
-import {HomeComponent} from "./home/home.component";
+import { HomeComponent } from './home';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -50,9 +47,7 @@ const APP_PROVIDERS = [
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS,
-    { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-    { provide: SEED_DATA, useClass: InMemoryDataService }     // in-mem server data
+    APP_PROVIDERS
   ]
 })
 export class AppModule {
