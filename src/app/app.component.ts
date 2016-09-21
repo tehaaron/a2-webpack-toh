@@ -31,6 +31,7 @@ import { AppState } from './app.service';
 
   `
 })
+
 export class App {
 
   constructor(
