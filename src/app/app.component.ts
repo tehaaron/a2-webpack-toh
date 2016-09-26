@@ -23,6 +23,12 @@ import { AppState } from './app.service';
           Home
         </a>
       </span>
+      |
+      <span>
+        <a [routerLink]=" ['./jobs'] ">
+          Jobs
+        </a>
+      </span>
     </nav>
     
     <main>

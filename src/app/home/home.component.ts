@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppState } from '../app.service';
 
 @Component({
@@ -11,8 +11,12 @@ import { AppState } from '../app.service';
 `
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   localState = { value: 'dummy'};
 
   constructor(public appState: AppState) {}
+
+  ngOnInit() {
+
+  }
 }

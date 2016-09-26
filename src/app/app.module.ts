@@ -1,3 +1,5 @@
+import './rxjs-extensions';
+
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -18,9 +20,12 @@ import { NoContent } from './no-content';
 
 
 // TOH
-import './rxjs-extensions';
+
 import { routedComponents } from './app.routes';
 import { HomeComponent } from './home';
+import { JobsService } from "./jobs/jobs.service";
+import {JobsComponent} from "./jobs/jobs.component";
+import {JobComponent} from "./job/job.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -36,6 +41,8 @@ const APP_PROVIDERS = [
   declarations: [
     App,
     HomeComponent,
+    JobsComponent,
+    JobComponent,
     NoContent,
     routedComponents
   ],
@@ -47,7 +54,8 @@ const APP_PROVIDERS = [
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    JobsService
   ]
 })
 export class AppModule {
