@@ -34,7 +34,6 @@ import { AppState } from './app.service';
     <main>
       <router-outlet></router-outlet>
     </main>
-
   `
 })
 

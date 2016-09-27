@@ -23,9 +23,9 @@ import { NoContent } from './no-content';
 
 import { routedComponents } from './app.routes';
 import { HomeComponent } from './home';
-import { JobsService } from "./jobs/jobs.service";
-import {JobsComponent} from "./jobs/jobs.component";
-import {JobComponent} from "./job/job.component";
+import { JobsService } from './jobs/jobs.service';
+import { JobsComponent } from './jobs';
+import { JobComponent } from './job';
 
 // Application wide providers
 const APP_PROVIDERS = [
