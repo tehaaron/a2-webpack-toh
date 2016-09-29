@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 import { JobsService } from '../jobs/jobs.service';
 
 @Component({
@@ -43,6 +42,7 @@ import { JobsService } from '../jobs/jobs.service';
           <div class="details">
             <span class="name"> <a href="">{{item.by}}</a></span>
             <span class="right">{{item.score}} ★</span>
+            <rating [(ngModel)]="starsCount"></rating>
           </div>
           <div class="details">
           {{item.time}}
@@ -64,6 +64,7 @@ import { JobsService } from '../jobs/jobs.service';
 export class JobComponent implements OnInit {
   @Input() itemID: number;
   item;
+  starsCount: number;
 
   constructor(private jobsService: JobsService) {}
 

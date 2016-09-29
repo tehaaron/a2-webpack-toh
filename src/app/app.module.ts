@@ -27,6 +27,10 @@ import { JobsService } from './jobs/jobs.service';
 import { JobsComponent } from './jobs';
 import { JobComponent } from './job';
 
+// ad hoc
+
+import { RatingModule } from 'ng2-rating';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -50,6 +54,7 @@ const APP_PROVIDERS = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RatingModule,
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
